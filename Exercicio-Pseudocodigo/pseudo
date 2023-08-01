@@ -1,0 +1,115 @@
+
+vetor clientes[10]
+vetor destinos[10]
+
+inteiro opcao
+
+para i de 1 até 10 faça
+    clientes[i] <- ""
+    destinos[i] <- ""
+fim-para
+
+
+repita
+   
+    escreva "Menu de cadastro para agência de viagens"
+    escreva "1 - Cadastrar cliente"
+    escreva "2 - Cadastrar destino"
+    escreva "3 - Consultar cliente"
+    escreva "4 - Consultar destino"
+    escreva "0 - Sair"
+    escreva "Digite a sua opção: "
+
+    leia opcao
+
+    escolha opcao
+        caso 1:
+            cadeia nome
+
+            inteiro posicao <- 0
+
+            para i de 1 até 10 faça
+                se clientes[i] = "" então
+                    posicao <- i
+                    pare 
+                fim-se
+            fim-para
+
+            se posicao > 0 então
+                escreva "Digite o nome do cliente: "
+                leia nome
+
+                clientes[posicao] <- nome
+
+                escreva "Cliente cadastrado com sucesso!"
+            senão
+                escreva "Não há mais espaço para cadastrar clientes!"
+            fim-se
+
+        caso 2:
+           
+            cadeia destino
+
+            inteiro posicao <- 0
+
+            para i de 1 até 10 faça
+                se destinos[i] = "" então
+                    posicao <- i
+                    pare 
+                fim-se
+            fim-para
+
+            se posicao > 0 então
+                escreva "Digite o nome do destino: "
+                leia destino
+                destinos[posicao] <- destino
+                escreva "Destino cadastrado com sucesso!"
+            senão
+                escreva "Não há mais espaço para cadastrar destinos!"
+            fim-se
+
+        caso 3:
+           
+            inteiro codigo
+
+            escreva "Digite o código do cliente que deseja consultar: "
+            leia codigo
+
+            se codigo >= 1 e codigo <= 10 então
+                se clientes[codigo] <> "" então  
+                    escreva "O nome do cliente com o código ", codigo, " é ", clientes[codigo]
+                senão  
+                    escreva "Não há nenhum cliente cadastrado com esse código!"
+                fim-se
+            senão
+                escreva "Código inválido!"
+            fim-se
+
+        caso 4:
+            
+            inteiro codigo
+
+            escreva "Digite o código do destino que deseja consultar: "
+            leia codigo
+
+            
+            se codigo >= 1 e codigo <= 10 então
+                se destinos[codigo] <> "" então 
+                    escreva "O nome do destino com o código ", codigo, " é ", destinos[codigo]
+                senão  
+                    escreva "Não há nenhum destino cadastrado com esse código!"
+                fim-se
+            senão
+                escreva "Código inválido!"
+            fim-se
+
+        caso 0:
+            
+            escreva "Obrigado por usar o nosso sistema. Até mais!"
+
+        outro-caso:
+            
+            escreva "Opção inválida! Tente novamente."
+    fim-escolha
+
+até opcao = 0
