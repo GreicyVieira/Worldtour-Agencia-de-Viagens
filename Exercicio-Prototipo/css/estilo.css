@@ -14,16 +14,14 @@ a {
 
 .menu {
  background-color: white; 
-
-
-
+ 
 }
 
 .menu a {
     color: gray;
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px
+    font-size: 20px
 }
 
 #rodape {
@@ -38,7 +36,6 @@ a {
 
 .box_destino {
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .descricao {
@@ -59,8 +56,7 @@ a {
 .preconegrito {
     font-weight: bold;
     color: rgb(85, 84, 84);  
-    
-}
+    }
 
 
 .logomarca-rodape {
@@ -81,8 +77,8 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    
-}
+    }
+
 main {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(85, 84, 84);
